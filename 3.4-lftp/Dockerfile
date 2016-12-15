@@ -1,4 +1,4 @@
-FROM helphi/alpine:3.4
+FROM helphi/alpine:3.4-openssh
 
 MAINTAINER helphi
 
