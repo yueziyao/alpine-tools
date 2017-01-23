@@ -2,6 +2,7 @@
 
 - `3.4` [Dockerfile](https://github.com/helphi/Dockerfile-alpine/blob/master/3.4/Dockerfile)
 - `3.4-openssh` [Dockerfile](https://github.com/helphi/Dockerfile-alpine/blob/master/3.4-openssh/Dockerfile)
+- `3.4-util` [Dockerfile](https://github.com/helphi/Dockerfile-alpine/blob/master/3.4-util/Dockerfile)
 
 ## Image Layers
 
