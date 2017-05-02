@@ -1,4 +1,4 @@
-FROM helphi/alpine:3.5
+FROM alpine:3.5
 
 ENV LANG=C.UTF-8
 
