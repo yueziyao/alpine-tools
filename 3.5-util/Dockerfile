@@ -2,7 +2,8 @@ FROM alpine:3.5
 
 ENV LANG=C.UTF-8
 
-RUN apk add --no-cache tzdata &&\
+RUN apk update &&\
+    apk add --no-cache tzdata &&\
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
     echo "Asia/Shanghai" > /etc/timezone &&\
     apk del tzdata
