@@ -9,7 +9,8 @@ RUN apk add --no-cache tzdata &&\
 
 RUN apk add --no-cache bash openssh openssh-sftp-server lftp rsync curl git
 RUN ssh-keygen -A
-RUN echo "root:root" | chpasswd
+RUN echo "root:root" | chpasswd &&\
+    echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D", "-e"]
