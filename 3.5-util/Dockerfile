@@ -10,4 +10,4 @@ RUN apk add --no-cache tzdata &&\
 RUN apk add --no-cache openssh openssh-sftp-server lftp rsync curl git
 RUN ssh-keygen -A
 
-CMD ["/usr/sbin/sshd", "-D", "-e"]
+CMD ["/usr/sbin/sshd", "-D"]
