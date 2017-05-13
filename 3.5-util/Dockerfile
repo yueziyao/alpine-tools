@@ -7,9 +7,13 @@ RUN apk add --no-cache tzdata &&\
     echo "Asia/Shanghai" > /etc/timezone &&\
     apk del tzdata
 
-RUN apk add --no-cache bash openssh openssh-sftp-server lftp rsync curl git
-RUN ssh-keygen -A &&、
-    echo "root:root" | chpasswd &&\
+RUN apk add --no-cache bash expect openssh openssh-sftp-server lftp rsync curl git
+
+RUN ssh-keygen -A &&\
+    ssh-keygen -t rsa -f ~/.ssh/id_rsa -N '' &&\
+    cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys &&\
+    chmod 600 ~/.ssh/authorized_keys &&\
+    echo 'root:root' | chpasswd &&\
     echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 
 EXPOSE 22
