@@ -7,7 +7,7 @@ RUN apk add --no-cache tzdata &&\
     echo "Asia/Shanghai" > /etc/timezone &&\
     apk del tzdata
 
-RUN apk add --no-cache bash expect openssh openssh-sftp-server lftp rsync curl wget git
+RUN apk add --no-cache bash expect openssh openssh-sftp-server lftp rsync curl wget git zip
 
 RUN ssh-keygen -A &&\
     ssh-keygen -t rsa -f ~/.ssh/id_rsa -N '' &&\
