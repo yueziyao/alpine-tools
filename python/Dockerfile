@@ -1,7 +1,6 @@
-FROM python:alpine
-LABEL version="0.1"
+FROM python:3.8-slim
 
-RUN pip install -i pymongo pandas requests numpy
+RUN pip3 install -i https://pypi.douban.com/simple --trusted-host pypi.douban.com  pymongo pandas requests numpy
 
 WORKDIR /app
 ENTRYPOINT ["python"]
