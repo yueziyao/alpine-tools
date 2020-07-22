@@ -1,6 +1,6 @@
-FROM python:3.8-slim
+FROM python:3.8.5-alpine3.12
 
-RUN pip3 install -i https://pypi.douban.com/simple --trusted-host pypi.douban.com  pymongo pandas requests numpy
+RUN pip3 install -i pymongo pandas requests numpy
 
 WORKDIR /app
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python3"]
