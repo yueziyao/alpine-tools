@@ -136,7 +136,3 @@ RUN set -ex; \
 	rm -f get-pip.py
 
 CMD ["python3"]
-
-RUN pip install -r requests
-
-ENTRYPOINT ["python3"]
